@@ -1,0 +1,332 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fire Reality | Entrenamiento contra incendios en Realidad Virtual</title>
+  <meta name="description" content="Fire Reality: simulación de entrenamiento en Realidad Virtual para aprender a usar un extintor, con un extintor háptico que vibra y responde como uno real.">
+  <meta property="og:title" content="Fire Reality | Entrena contra el fuego sin riesgo">
+  <meta property="og:description" content="Simulación de entrenamiento en RV con extintor háptico.">
+  <meta property="og:image" content="assets/img/logo.png">
+  <meta name="theme-color" content="#231816">
+  <link rel="icon" type="image/png" href="assets/img/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- ============ NAVEGACIÓN ============ -->
+  <header class="nav" id="top">
+    <div class="container nav__inner">
+      <a href="#top" class="brand" aria-label="Fire Reality, inicio">
+        <img src="assets/img/logo.png" alt="" width="40" height="40">
+        <span>FIRE REALITY</span>
+      </a>
+      <button class="nav__toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav__menu" id="menu">
+        <a href="#simulacion">Simulación</a>
+        <a href="#haptico">Háptico</a>
+        <a href="#galeria">Galería</a>
+        <a href="#empresa">Empresa</a>
+        <a href="#equipo">Equipo</a>
+        <a href="#contacto" class="btn btn--small">Solicita una demo</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ============ HERO ============ -->
+    <section class="hero">
+      <div class="hero__bg" style="background-image:url('assets/img/hero-camion.jpg')" aria-hidden="true"></div>
+      <div class="container hero__inner">
+        <div class="hero__text reveal">
+          <p class="eyebrow">Entrenamiento en Realidad Virtual</p>
+          <h1>Entrena contra el fuego <span class="text-red">sin riesgo.</span></h1>
+          <p class="lead">
+            Fire Reality es una simulación inmersiva para aprender a usar un extintor.
+            Con los lentes de RV y nuestro <strong>extintor háptico</strong>, sientes la vibración
+            y la respuesta de un extintor real mientras apagas un incendio virtual.
+          </p>
+          <div class="hero__actions">
+            <a href="#contacto" class="btn">Solicita una demo</a>
+            <a href="#haptico" class="btn btn--ghost">Ver el háptico</a>
+          </div>
+        </div>
+        <div class="hero__logo reveal">
+          <img src="assets/img/logo.png" alt="Logo de Fire Reality: lentes de realidad virtual sobre llamas" width="346" height="348">
+        </div>
+      </div>
+      <ul class="hero__stats container">
+        <li><strong>0</strong><span>riesgo de quemaduras</span></li>
+        <li><strong>360°</strong><span>escenario inmersivo</span></li>
+        <li><strong>1:1</strong><span>respuesta háptica</span></li>
+        <li><strong>∞</strong><span>repeticiones</span></li>
+      </ul>
+    </section>
+
+    <div class="caution" aria-hidden="true"><div class="caution__track"></div></div>
+
+    <!-- ============ SIMULACIÓN ============ -->
+    <section class="section section--cream" id="simulacion">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="eyebrow">La simulación</p>
+          <h2>Practicar con fuego real es caro y peligroso. <span class="text-red">Aquí no.</span></h2>
+          <p>
+            Un simulacro con fuego real necesita espacio controlado, extintores que se vacían en segundos
+            y personal de seguridad. Por eso la mayoría de las personas nunca practica.
+            Fire Reality lleva ese entrenamiento a un entorno virtual realista donde puedes equivocarte,
+            repetir y mejorar hasta que la técnica se vuelva automática.
+          </p>
+        </header>
+
+        <ol class="steps">
+          <li class="step reveal">
+            <span class="step__num">01</span>
+            <h3>Ponte los lentes</h3>
+            <p>Entras a un escenario 3D realista con sonido ambiente: el humo, el crujido de las llamas y la alarma.</p>
+          </li>
+          <li class="step reveal">
+            <span class="step__num">02</span>
+            <h3>Toma el extintor</h3>
+            <p>Sostienes el control háptico. El giroscopio lee hacia dónde apuntas y lo refleja en tiempo real dentro de la simulación.</p>
+          </li>
+          <li class="step reveal">
+            <span class="step__num">03</span>
+            <h3>Apunta a la base</h3>
+            <p>Dirige la descarga a la base del fuego y barre de lado a lado, como en la técnica que usan los bomberos.</p>
+          </li>
+          <li class="step reveal">
+            <span class="step__num">04</span>
+            <h3>Siente la descarga</h3>
+            <p>Al presionar el gatillo, el motor vibrador responde con la intensidad que eliges. Tus manos aprenden lo mismo que tus ojos.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ HÁPTICO ============ -->
+    <section class="section section--dark" id="haptico">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="eyebrow eyebrow--yellow">El háptico</p>
+          <h2>Un extintor que <span class="text-red">responde</span>.</h2>
+          <p>
+            Diseñamos y armamos nuestro propio dispositivo háptico. Envía al programa la orientación y la fuerza
+            con la que el usuario acciona el extintor, y recibe de vuelta una vibración congruente con lo que pasa
+            en la simulación.
+          </p>
+        </header>
+
+        <div class="haptic">
+          <div class="haptic__media reveal">
+            <figure class="photo photo--tall">
+              <img src="assets/img/haptico-1.jpg" alt="Prototipo del háptico: ESP32, protoboard y controlador de motores conectados con cables" loading="lazy" width="600" height="800">
+            </figure>
+            <figure class="photo">
+              <img src="assets/img/haptico-2.jpg" alt="Acercamiento al circuito del háptico con giroscopio y controlador L298N" loading="lazy" width="960" height="720">
+            </figure>
+          </div>
+
+          <div class="haptic__video reveal">
+            <div class="video-frame">
+              <video controls playsinline preload="metadata" poster="assets/img/video-poster.jpg">
+                <source src="assets/video/haptico.mp4" type="video/mp4">
+                Tu navegador no puede reproducir este video.
+              </video>
+            </div>
+            <p class="caption">Prueba del háptico: la vibración cambia según cómo se acciona el control.</p>
+          </div>
+        </div>
+
+        <h3 class="subhead reveal">Piezas importantes</h3>
+        <ul class="parts">
+          <li class="part reveal">
+            <img src="assets/img/piezas/esp32.jpg" alt="Microcontrolador ESP32" loading="lazy" width="400" height="400">
+            <h4>Microcontrolador ESP32</h4>
+            <p>El cerebro del háptico. Lee los sensores y se comunica con la simulación.</p>
+          </li>
+          <li class="part reveal">
+            <img src="assets/img/piezas/giroscopio.jpg" alt="Giroscopio GY-521" loading="lazy" width="400" height="400">
+            <h4>Giroscopio GY-521</h4>
+            <p>Detecta la inclinación y el giro del extintor para saber hacia dónde apunta el usuario.</p>
+          </li>
+          <li class="part reveal">
+            <img src="assets/img/piezas/potenciometro.jpg" alt="Potenciómetro de 10 kΩ" loading="lazy" width="400" height="400">
+            <h4>Potenciómetro 10 kΩ</h4>
+            <p>Funciona como gatillo: mide qué tanto se presiona para regular la descarga.</p>
+          </li>
+          <li class="part reveal">
+            <img src="assets/img/piezas/motor-vibrador.jpg" alt="Motor vibrador con masa desbalanceada" loading="lazy" width="400" height="400">
+            <h4>Motor vibrador</h4>
+            <p>Su masa desbalanceada genera la vibración que imita la presión del extintor.</p>
+          </li>
+          <li class="part reveal">
+            <img src="assets/img/piezas/l298n.jpg" alt="Controlador de motores L298N" loading="lazy" width="400" height="400">
+            <h4>Controlador L298N</h4>
+            <p>Entrega la potencia al motor y permite variar la intensidad de la vibración.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <div class="caution caution--reverse" aria-hidden="true"><div class="caution__track"></div></div>
+
+    <!-- ============ GALERÍA Y DOCUMENTAL ============ -->
+    <section class="section section--cream" id="galeria">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="eyebrow">Galería</p>
+          <h2>El escenario</h2>
+          <p>Un espacio de entrenamiento con una casa de madera, donde se desarrolla el incendio. Así va el mundo virtual.</p>
+        </header>
+
+        <div class="gallery">
+          <button class="gallery__item gallery__item--wide reveal" data-full="assets/img/escenario-1.jpg">
+            <img src="assets/img/escenario-1.jpg" alt="Escenario 3D: casa de madera y chimenea de ladrillo dentro de una nave de entrenamiento" loading="lazy" width="900" height="711">
+          </button>
+          <!-- Para agregar capturas: copia este bloque y cambia la ruta de la imagen -->
+          <div class="gallery__item gallery__item--empty reveal">
+            <span>Próximamente: más capturas del escenario</span>
+          </div>
+          <div class="gallery__item gallery__item--empty reveal">
+            <span>Próximamente: vista desde los lentes de RV</span>
+          </div>
+        </div>
+
+        <div class="documentary reveal">
+          <div class="documentary__text">
+            <p class="eyebrow">Mini documental</p>
+            <h3>Detrás de Fire Reality</h3>
+            <p>Cómo construimos el escenario, el háptico y la experiencia completa, contado por el equipo.</p>
+          </div>
+          <div class="documentary__player">
+            <!--
+              Cuando el documental esté listo en YouTube, reemplaza el <div class="placeholder"> por:
+              <iframe src="https://www.youtube.com/embed/ID_DEL_VIDEO" title="Documental Fire Reality" allowfullscreen loading="lazy"></iframe>
+            -->
+            <div class="placeholder">
+              <span class="placeholder__icon" aria-hidden="true">▶</span>
+              <span>Estreno próximamente</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ EMPRESA ============ -->
+    <section class="section section--white" id="empresa">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="eyebrow">La empresa</p>
+          <h2>Somos <span class="text-red">Fire Reality</span></h2>
+          <p>Creemos que saber usar un extintor no debería depender de vivir un incendio. Desarrollamos simulaciones de entrenamiento que hacen la prevención accesible, segura y repetible.</p>
+        </header>
+
+        <div class="cards">
+          <article class="card reveal">
+            <h3>Misión</h3>
+            <p>Capacitar a cualquier persona para responder ante un conato de incendio, a través de experiencias de Realidad Virtual realistas y retroalimentación háptica.</p>
+          </article>
+          <article class="card reveal">
+            <h3>Visión</h3>
+            <p>Ser la herramienta de referencia en entrenamiento contra incendios para escuelas, empresas y brigadas de protección civil.</p>
+          </article>
+          <article class="card card--accent reveal">
+            <h3>Objetivos</h3>
+            <ul>
+              <li>Reducir el costo y el riesgo de los simulacros con fuego real.</li>
+              <li>Enseñar la técnica correcta de uso del extintor.</li>
+              <li>Medir el desempeño del usuario en cada práctica.</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ EQUIPO ============ -->
+    <section class="section section--dark" id="equipo">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="eyebrow eyebrow--yellow">El equipo</p>
+          <h2>Quiénes lo hacemos posible</h2>
+        </header>
+        <!-- Para mostrar el rol de cada quien, cambia el texto de <p class="member__role"> (Programación, Arte digital o Documentación y Marketing) -->
+        <ul class="team">
+          <li class="member reveal"><span class="member__avatar">OC</span><h3>Oscar Alonso Cerda Rivera</h3><p class="member__role">Integrante</p></li>
+          <li class="member reveal"><span class="member__avatar">RL</span><h3>Ricardo Iván López Vargas</h3><p class="member__role">Integrante</p></li>
+          <li class="member reveal"><span class="member__avatar">SP</span><h3>Samuel Ponce Ramírez</h3><p class="member__role">Integrante</p></li>
+          <li class="member reveal"><span class="member__avatar">DL</span><h3>Derek Alejandro Luna Hernández</h3><p class="member__role">Integrante</p></li>
+          <li class="member reveal"><span class="member__avatar">AG</span><h3>Ángel Tadeo García Almanza</h3><p class="member__role">Integrante</p></li>
+          <li class="member reveal"><span class="member__avatar">AL</span><h3>Arantza Loza Llamas</h3><p class="member__role">Integrante</p></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ CONTACTO ============ -->
+    <section class="section section--red" id="contacto">
+      <div class="container contact">
+        <div class="contact__text reveal">
+          <p class="eyebrow eyebrow--light">Contacto</p>
+          <h2>¿Quieres probar Fire Reality?</h2>
+          <p>Escríbenos para agendar una demostración para tu escuela, empresa o brigada.</p>
+          <ul class="socials">
+            <!-- Cambia el href por el enlace real de la red social de la campaña -->
+            <li><a href="#" class="social" aria-label="Instagram de Fire Reality">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" class="fill"/></svg>
+              Instagram</a></li>
+            <li><a href="#" class="social" aria-label="Facebook de Fire Reality">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v3H7v4h3v6h4v-6h3l1-4h-4V8z"/></svg>
+              Facebook</a></li>
+            <li><a href="#" class="social" aria-label="TikTok de Fire Reality">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3v11.5a3.5 3.5 0 1 1-3-3.46M14 3c.5 3 2.5 5 5.5 5"/></svg>
+              TikTok</a></li>
+          </ul>
+        </div>
+
+        <form class="form reveal" id="contact-form" novalidate>
+          <label>Nombre
+            <input type="text" name="nombre" required autocomplete="name">
+          </label>
+          <label>Correo
+            <input type="email" name="correo" required autocomplete="email">
+          </label>
+          <label>Organización
+            <input type="text" name="organizacion" autocomplete="organization">
+          </label>
+          <label>Mensaje
+            <textarea name="mensaje" rows="4" required></textarea>
+          </label>
+          <button type="submit" class="btn btn--dark">Enviar mensaje</button>
+          <p class="form__status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <a href="#top" class="brand">
+        <img src="assets/img/logo.png" alt="" width="36" height="36">
+        <span>FIRE REALITY</span>
+      </a>
+      <p>Proyecto académico de Realidad Virtual · Grupo 53 · Agosto–Diciembre 2026<br>
+         Profesor: Jerson Aldair Gámez Castro</p>
+      <a href="#top" class="footer__top">Volver arriba ↑</a>
+    </div>
+  </footer>
+
+  <!-- Visor de imágenes -->
+  <dialog class="lightbox" id="lightbox">
+    <button class="lightbox__close" aria-label="Cerrar">×</button>
+    <img src="" alt="">
+  </dialog>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
