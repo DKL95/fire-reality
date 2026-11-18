@@ -1,8 +1,9 @@
 // Fire Reality: interacciones de la página
 document.documentElement.classList.add('js');
 
-// Correo al que llegan los mensajes del formulario. Cámbialo por el real.
-const CONTACT_EMAIL = 'contacto@firereality.mx';
+// Los mensajes del formulario se reenvían por FormSubmit (formsubmit.co) a este correo.
+// No se muestra en la página; solo está aquí en el código.
+const FORM_ID = 'alejandrolunah2003@gmail.com';
 
 // Cinta de precaución: se repite el patrón dos veces para que el desplazamiento sea continuo
 document.querySelectorAll('.caution__track').forEach(track => {
@@ -62,7 +63,7 @@ lightbox.addEventListener('click', e => { if (e.target === lightbox) lightbox.cl
 // Formulario: abre el correo del usuario con el mensaje ya escrito
 const form = document.getElementById('contact-form');
 const status = form.querySelector('.form__status');
-form.addEventListener('submit', e => {
+form.addEventListener('submit', async e => {
   e.preventDefault();
   if (!form.checkValidity()) {
     status.textContent = 'Completa tu nombre, un correo válido y el mensaje.';
@@ -71,9 +72,33 @@ form.addEventListener('submit', e => {
     return;
   }
   const d = new FormData(form);
-  const subject = `Demo Fire Reality - ${d.get('nombre')}`;
-  const body = `Nombre: ${d.get('nombre')}\nCorreo: ${d.get('correo')}\nOrganización: ${d.get('organizacion') || '-'}\n\n${d.get('mensaje')}`;
-  window.location.href = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  const btn = form.querySelector('button[type="submit"]');
+  btn.disabled = true;
   status.classList.remove('is-error');
-  status.textContent = 'Se abrió tu aplicación de correo con el mensaje listo para enviar.';
+  status.textContent = 'Enviando…';
+  try {
+    const res = await fetch(`https://formsubmit.co/ajax/${FORM_ID}`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify({
+        _subject: `Demo Fire Reality - ${d.get('nombre')}`,
+        _replyto: d.get('correo'),
+        _template: 'table',
+        _captcha: 'false',
+        Nombre: d.get('nombre'),
+        Correo: d.get('correo'),
+        'Organización': d.get('organizacion') || '-',
+        Mensaje: d.get('mensaje')
+      })
+    });
+    const data = await res.json();
+    if (!res.ok || String(data.success) !== 'true') throw new Error(data.message);
+    form.reset();
+    status.textContent = '¡Gracias! Recibimos tu mensaje y te responderemos pronto.';
+  } catch {
+    status.classList.add('is-error');
+    status.textContent = 'No se pudo enviar el mensaje. Inténtalo de nuevo en unos minutos.';
+  } finally {
+    btn.disabled = false;
+  }
 });
